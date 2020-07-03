@@ -1,0 +1,39 @@
+[ec2-user@ip-192-167-0-119 ~]$ mysql -h mysql-primary.cimr5rocfx8l.us-west-2.rds.amazonaws.com -u admin -p udacity
+Enter password: 
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 6
+Server version: 5.7.22-log Source distribution
+
+Copyright (c) 2000, 2020, Oracle and/or its affiliates. All rights reserved.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> select * from mysql ;
++-------------+-------------------+-----------------+
+| 	   id | name              | author          |
++-------------+-------------------+-----------------+
+|           1 | AWS1              | Jack            |
++-------------+-------------------+-----------------+
+1 row in set (0.00 sec)
+
+mysql> insert into  mysql (name, author) values ('AWS - RDS - Replica', 'Jack');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> select * from tutorials ;
++-------------+-----------------------------+-----------------+
+| tutorial_id | tutorial_title              | tutorial_author |
++-------------+-----------------------------+-----------------+
+|           1 | AWS                         | Jack            |
+|           2 | AWS - RDS - Replica         | Jack            |
++-------------+-----------------------------+-----------------+
+2 rows in set (0.00 sec)
+
+mysql> 
+
